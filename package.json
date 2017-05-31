@@ -1,0 +1,19 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "A Simple URL Shortner that is a RESTful API in Node using Node for a simplified URL shortener application similar to bit.ly’s main function. ",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "URLShortener",
+    "RESTful",
+    "API",
+    "Node",
+    "Express",
+    "BodyParser"
+  ],
+  "author": "Aaron Wilson",
+  "license": "ISC"
+}
