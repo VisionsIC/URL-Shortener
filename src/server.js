@@ -4,10 +4,8 @@ var express = require('express');
 var app = express();
 // Configuration Variables.
 var port = 3000;
-// JSON Request Test.
-app.get('/talk', function (req,res) {
-  res.json({Hello: 'World!'});
-});
+// Assign all routes to the routes folder w/ API prefix.
+app.use('/api', '../routes/api.js');
 // Application Listening to the port at 3000.
 app.listen(port, function() {
   console.log('Server is successfully active on port', port);
