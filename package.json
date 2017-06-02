@@ -17,7 +17,10 @@
   "author": "Aaron Wilson",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
     "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
   }
 }
