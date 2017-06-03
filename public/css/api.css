@@ -89,6 +89,19 @@
 #short-url {
     position: relative;
 }
+#url-link {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+}
 #base {
  background-color:#000000;
 }

@@ -7,6 +7,13 @@ $(function(){
     $('#submit').click(function(){
         // Create a "normalUrl" variable to gain control of the "normal-url" input field.
        var normalUrl = $('#normal-url').val();
-
-       });
+       // Use the JQuery POST to insert the "normalUrl" variable into an anonymous function to be
+        // converted by Node, Express, and Body-Parser.
+        $.post('/api/v1/shorturl', {
+         url: normalUrl
+        }, function (data) {
+        $('#short-url').html("Shorturl: " + '<a id="url-link" href="/' + data + '">' +
+                window.location.href + data + '</a>');
+        })
+   })
 });
