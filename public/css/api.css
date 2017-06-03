@@ -2,21 +2,45 @@
   background-color:#1682c9;
 }
 #default, #logo, #main, #base {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
 }
 #logo {
   position: relative;
+  width: 100%;
+  max-height: 150px;
   background-color: #ffffff;
 }
+#svg-logo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 #main {
+  display: block;
+  text-align: center;
+  height: 100px;
   background-color:#cecece;
+}
+#form-box {
+    position: relative;
+    display: inline-block;
+    top: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 #normal-url {
     position: relative;
+    display: inline-block;
+    left: 0;
+    width: 250px;
 }
 #submit {
     position: relative;
+    display: inline-block;
+    left: 0;
 }
 #short-url {
     position: relative;
