@@ -13,9 +13,26 @@
 }
 #svg-logo {
     position: relative;
+    top: 20%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#title-h3 {
+    position: relative;
+    top: 20%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    z-index: 1;
 }
 #main {
   display: block;
@@ -37,10 +54,21 @@
     left: 0;
     width: 250px;
 }
-#submit {
+#submit, #normal-url{
     position: relative;
     display: inline-block;
     left: 0;
+    background-color: #ffffff;
+    color: #1682c9;
+    text-decoration: none;
+    border: 1px solid #1682c9;
+    border-radius: 2px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#submit:hover, #normal-url:hover {
+    background-color: #1682C9; /* Blue */
+    color: white;
 }
 #short-url {
     position: relative;
