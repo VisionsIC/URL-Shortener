@@ -6,7 +6,7 @@ $(function(){
     // This is the function to control the click event of the "submit" button.
     $('#submit').click(function(){
         // Create a "normalUrl" variable to gain control of the "normal-url" input field.
-       var normalUrl = $('#normal-url').val();
+       const normalUrl = $('#normal-url').val();
        // Use the JQuery POST to insert the "normalUrl" variable into an anonymous function to be
         // converted by Node, Express, and Body-Parser.
         $.post('/api/v1/shorturl', {

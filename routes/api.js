@@ -1,5 +1,5 @@
 module.exports = function (express) {
-  var router = express.Router();
+  const router = express.Router();
   // JSON Request Test.
   router.get('/request', function (req,res) {
     res.json({hello: 'world'});

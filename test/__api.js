@@ -1,8 +1,8 @@
 // Add the Supertest Module.
-var request = require('supertest');
+const request = require('supertest');
 // Mocha Test One
 describe('API', function(){
-  var server;
+  let server;
   // Start Server for testing.
   beforeEach(function(){
     server = require('../src/server.js');
@@ -11,7 +11,7 @@ describe('API', function(){
   afterEach(function(){
     server.close();
   });
-  // Commense the Request test.
+  // Commence the Request test.
   it('This should initiate the REQUEST test.', function testRequest(done){
     request(server)
     .get('/api/request')
@@ -19,7 +19,7 @@ describe('API', function(){
     .expect('Content-Type', /json/)
     .expect(200, {hello: 'world'}, done)
   });
-  // Commense the Request test.
+  // Commence the Request test.
   it('This should initiate the STATUS test.', function testHealth(done){
     request(server)
     .get('/api/status')
@@ -27,9 +27,9 @@ describe('API', function(){
     .expect('Content-Type', /json/)
     .expect(200, {healthy: 'true'}, done)
   });
-  // Commense the Request test.
+  // Commence the Request test.
   it('This should initiate the USER ID test.', function testUserID(done){
-    var fakeUserID = 347
+    const fakeUserID = 347;
     request(server)
     .get('/api/user/' + fakeUserID)
     .set('Accept', 'application/json')
