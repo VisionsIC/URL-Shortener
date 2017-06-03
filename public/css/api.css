@@ -1,0 +1,26 @@
+#default {
+  background-color:#1682c9;
+}
+#default, #logo, #main, #base {
+  position: absolute;
+  margin: 0 auto;
+}
+#logo {
+  position: relative;
+  background-color: #ffffff;
+}
+#main {
+  background-color:#cecece;
+}
+#normal-url {
+    position: relative;
+}
+#submit {
+    position: relative;
+}
+#short-url {
+    position: relative;
+}
+#base {
+ background-color:#000000;
+}
