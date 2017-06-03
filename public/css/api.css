@@ -48,6 +48,18 @@
     margin-right: auto;
     text-align: left;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #1682C9;
+    text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #1682C9;
+    text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #1682C9;
+    text-align: center;
+}
 #normal-url {
     position: relative;
     display: inline-block;
@@ -58,6 +70,7 @@
     position: relative;
     display: inline-block;
     left: 0;
+    height: 20px;
     background-color: #ffffff;
     color: #1682c9;
     text-decoration: none;
@@ -69,6 +82,9 @@
 #submit:hover, #normal-url:hover {
     background-color: #1682C9; /* Blue */
     color: white;
+}
+#submit {
+    height: 24px !important;
 }
 #short-url {
     position: relative;
