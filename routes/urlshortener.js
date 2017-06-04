@@ -7,11 +7,11 @@ const charObject = {};
 // Export the JSON object module that hold the necessary JS code to shorten the URL.
 module.exports = {
     // The "shrink" data object allows for an anonymous function w/ an "address" parameter to hash and shorten the URL.
-    shrink: function(address) {
+    shrink: function (address) {
         // Let the "hash" variable invoke the "hasha" variable to tell what conversion standard to use.
         let hash = hasha(address, {encoding: "base64", algorithm: "mds"});
         // Let the "char" variable invoke the "hash" variable to use the slice method to shorten the URL.
-        let char = hash.slice(8,4);
+        let char = hash.slice(8, 4);
         // Tell "char" variable to replace noted characters in the URL to aid in the shortening of the URL.
         char = char.replace('/', '-');
         // Tell "char" variable to replace noted characters in the URL to aid in the shortening of the URL.
@@ -23,6 +23,8 @@ module.exports = {
     },
     // The "stretch" data object allows for an anonymous function w/ an "shorturl" parameter to hash and shorten the
     // URL.
-    stretch: function(shorturl) {
+    stretch: function (shorturl) {
         // Returns the "charObject" Array w/ the "shorturl" variable inside the array.
         return charObject[shorturl];
+    }
+};
