@@ -18,18 +18,24 @@ module.exports = function (express) {
     router.get('/status', function (req, res) {
         res.json({healthy: 'true'});
     });
-    // JSON User ID Test.
+    // Make a empty 'datastore' array.
     const  datastore = [];
-    router.get('/:regular', function (req,res){
+    // Create a POST w/ a parameter of 'regular' stored in a variable of the same name in an anonymous function.
+    router.post('/:regular', function (req,res){
+        // Pass that '' parameter in the 'params' method.
         const regular = req.params.regular;
+        // Push the parameter to the 'datastore' array.
         datastore.push({regular: regular});
+        // Store the "" variable in another variable called "resObj".
         const resObj = {CapturedUrl: regular};
+        // Response by sending the "resObj" variable.
         res.send(resObj);
     });
-    // JSON User ID Test.
-    router.post('/:regular', bodyJson, function (req,res){
-        console.log(req.body);
-        res.json({output: {data: req.body}});
+    // this uses the GET method to find all data JSON objects added to the array at the address 'urldata'.
+    router.get('/urldata', function(req,res){
+        // SEND all objects added to the 'datastore' array.
+        res.send(datastore);
     });
+    // Return the "router" variable.
     return router;
 };
