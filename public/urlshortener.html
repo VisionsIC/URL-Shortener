@@ -65,8 +65,8 @@
     <h3 id="title-h3">URL Shortener v1.0</h3>
 </header>
 <section id="main">
-  <form id="form-box" action="urlshortener.html" method="post" enctype="multipart/form-data">
-      <input id="normal-url" type="text" placeholder="ENTER A URL" name="normal-url">
+  <form id="form-box" action="http://localhost:3000/api/v1/url_get" method="get" enctype="application/x-www-form-urlencoded">
+      <input id="normal-url" type="text" placeholder="ENTER A URL" name="url">
       <button id="submit" type="submit">Submit</button>
 
       <div id="short-url">
