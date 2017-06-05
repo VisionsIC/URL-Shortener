@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>VisionsIC's URL shortener: A RESTful API</title>
     <link href="css/api.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/submit.js"></script>
 </head>
 <body id="default">
 <header id="logo">
@@ -63,7 +65,7 @@
     <h3 id="title-h3">URL Shortener v1.0</h3>
 </header>
 <section id="main">
-  <form id="form-box">
+  <form id="form-box" action="urlshortener.html" method="post" enctype="multipart/form-data">
       <input id="normal-url" type="text" placeholder="ENTER A URL" name="normal-url">
       <button id="submit" type="submit">Submit</button>
 
@@ -74,7 +76,23 @@
 <footer id="base">
 
 </footer>
+<script type="application/javascript">
+    // Start by building out an anonymous function to house other necessary control functionality.
+    $(document).ready(function(){
+        // This is the function to control the click event of the "submit" button.
+        $('#submit').click(function(){
+            // Create a "normalUrl" variable to gain control of the "normal-url" input field.
+            const url = $('#normal-url').val();
+            // Use the JQuery POST to insert the "normalUrl" variable into an anonymous function to be
+            // converted by Node, Express, and Body-Parser.
+            $.post('/v1/:regular', {
+            url: url
+            }, function (data) {
+            $('#short-url').html("Regular: " + '<a id="url-link" href=' + data + '"/">' +
+                window.location.href + data + '</a>');
+            })
+        })
+    });
+</script>
 </body>
-<script src="js/jquery.min.js"></script>
-<script src="js/submit.js"></script>
 </html>
