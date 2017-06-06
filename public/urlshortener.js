@@ -5,10 +5,10 @@ const newStr = {};
 // Module exports 'urlManipulate' w/ 2 properties; shorten & expand.
 module.exports.urlManipulate = {
     // The 'shorten' property inside the JS object holds an exportable anonymous function.
-    shorten: module.exports.shorten = function(){
+    shorten: module.exports.urlShortener = function(){
         // Construct an anonymous function in a variable called "randSort" to be used below.
         const randSort = function () {
-            //
+            // Return the 'Math.random' method to shuffle the leftover string.
             return Math.random()>.5 ? -1 : 1;
         };
         // New variable "shortUrl" which gains access to the 'grabUrl' function from the 'api.js' file.
@@ -27,12 +27,14 @@ module.exports.urlManipulate = {
         stripUrl = stripUrl.trunc(5);
         // Creates the 'newStr' array to accept in the new 'stripUrl' variable.
         newStr[stripUrl] = stripUrl;
+        //
+        let addUrl = 'http://' + newStr;
+        // Test it out for progress.
+        console.log(addUrl);
         // Returns 'stripUrl' function.
-        return stripUrl;
+        return addUrl;
     },
     // The 'expand' property inside the JS object holds an exportable anonymous function.
     expand: module.exports.expand = function (){
-
     }
 };
-

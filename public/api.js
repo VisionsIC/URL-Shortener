@@ -1,4 +1,3 @@
-
 // BodyParser module added.
 const bodyParser = require('body-parser');
 // This makes use of the apps "bodyParser" module along w/ 'urlencoded' to be 'extended' and set to true.
@@ -32,11 +31,20 @@ module.exports = function (express) {
         // Respond w/ JSON stringify w/ the aforementioned variable.
        res.end(JSON.stringify(urlData.newUrl));
     });
-    //router.use()
+    router.post('/url_post', function (req, res){
+        //
+        const newStr = {
+        shorten:req.query.urlManipulate.shorten.urlShortener(),
+        };
+        // Test the response w/ console.log to to the "urlData" variable.
+        console.log(newStr);
+        // Respond w/ a JSON object of the "newStr" variable.
+        res.json(newStr);
+    });
     // Make a empty 'datastore' array.
     const  datastore = [];
     // Create a POST w/ a parameter of 'regular' stored in a variable of the same name in an anonymous function.
-    router.post('/:regular', function (req,res){
+    router.post('/:regular', function (req, res){
         // Pass that '' parameter in the 'params' method.
         const regular = req.params.regular;
         // Push the parameter to the 'datastore' array.

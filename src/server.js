@@ -5,6 +5,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 // Assign all routes to the routes folder w/ API prefix.
 app.use('/api/v1', require('../public/api.js')(express));
+// Set for use of 'Pug(new)/Jade(old) but same' Template Engine.
+app.set('view engine', 'pug');
 // Application Listening to the port at 3000.
 const server = app.listen(port, function() {
   // Log a string output to let the developer know the server is currently active and working.
