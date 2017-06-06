@@ -19,4 +19,7 @@ app.get('/urlshortener.html', function (req, res){
 });
 // Export the "server" variable to be used by "__api.js" for testing purposes w/ Mocha.
 module.exports = server;
+// Export "" variable for access.
 module.exports = app;
+// Export "" variable for access.
+module.exports = express;
