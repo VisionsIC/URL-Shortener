@@ -6,13 +6,13 @@ $(function(){
     // This is the function to control the click event of the "submit" button.
     $('#submit').click(function(){
         // Create a "normalUrl" variable to gain control of the "normal-url" input field.
-       const url = $('#normal-url').val();
+       const url = $('#url').val();
        // Use the JQuery POST to insert the "normalUrl" variable into an anonymous function to be
         // converted by Node, Express, and Body-Parser.
-        $.post('/api/v1/shorten', {
+        $.post('/api/v1/post', {
          url: url
         }, function (data) {
-        $('#short-url').html("Shortcode: " + '<a id="url-link" href=' + data + '"/">' +
+        $('#short-url').html("Shortened Url: " + '<a id="url-link" href=' + data + '"/">' +
                 window.location.href + data + '</a>');
         })
    })

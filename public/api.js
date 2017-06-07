@@ -1,9 +1,5 @@
-// BodyParser module added.
-const bodyParser = require('body-parser');
 // This makes use of the apps "bodyParser" module along w/ 'urlencoded' to be 'extended' and set to true.
 //const urlBody = bodyParser.urlencoded({extended: true});
-// This makes use of the apps "bodyParser" module along w/ JSON.
-const bodyJson = bodyParser.json();
 module.exports = function (express) {
     // Create variable "shorten" that requires the "urlshortener.js" file work with the API.
     //const shortUrl = require('urlshortener.js');
@@ -31,10 +27,10 @@ module.exports = function (express) {
         // Respond w/ JSON stringify w/ the aforementioned variable.
        res.end(JSON.stringify(urlData.newUrl));
     });
-    router.post('/url_post', function (req, res){
+    router.post('/post', function (req, res){
         //
         const newStr = {
-        shorten:req.query.urlManipulate.shorten.urlShortener(),
+        shorten:req.query.urlManipulate.shorten,
         };
         // Test the response w/ console.log to to the "urlData" variable.
         console.log(newStr);
